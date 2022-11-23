@@ -58,7 +58,7 @@ class MyLayout(Widget):
         try:
             answer = eval(prior)
             self.ids.calc_input.text = str(answer)
-        except IndexError:
+        except (SyntaxError, NameError):
             self.ids.calc_input.text = "Error"
 
 
